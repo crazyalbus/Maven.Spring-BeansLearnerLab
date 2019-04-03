@@ -40,4 +40,14 @@ public abstract class People <PersonType extends Person>{
     public List<PersonType> findAll(){
         return personList;
     }
+
+    @Override
+    public String toString() {
+        String personString = "";
+        for (PersonType person: personList) {
+           personString += "Id: " + person.getID() +
+                   ", Name: " + person.getName() + "\n";
+        }
+        return personString;
+    }
 }
