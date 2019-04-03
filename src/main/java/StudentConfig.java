@@ -19,7 +19,7 @@ public class StudentConfig {
         return currentStudents;
     }
 
-    @Bean
+    @Bean(name = "previousStudents")
     public Students previousStudents() {
         return previousStudents;
     }

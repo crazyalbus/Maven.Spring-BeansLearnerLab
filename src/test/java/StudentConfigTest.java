@@ -23,6 +23,6 @@ public class StudentConfigTest {
                 "Id: 1, Name: Kate\n" +
                 "Id: 2, Name: Thao\n";
         //When
-        String actual =
+        String actual =currentStudents.toString();
     }
 }
