@@ -29,4 +29,18 @@ List<Student> students;
     public void setStudents(List<Student> students) {
         this.students = students;
     }
+
+    @Override
+    public String toString() {
+        String classroom = "";
+        classroom += "Instructors\n----------\n";
+        for (Instructor instructor: instructors) {
+            classroom += instructor.toString() + "\n";
+        }
+        classroom += "\nStudents\n----------\n";
+        for (Student student : students) {
+            classroom += student.toString() + "\n";
+        }
+        return classroom;
+    }
 }

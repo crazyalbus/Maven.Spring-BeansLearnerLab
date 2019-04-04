@@ -6,13 +6,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = StudentConfig.class)
 public class StudentConfigTest {
 
-    @Autowired @Qualifier(name = "students")
+    @Autowired @Qualifier("students")
     public Students currentStudents;
 
-    @Autowired @Qualifier(name = "previousStudents")
+    @Autowired @Qualifier("previousStudents")
     public Students previousStudents;
 
 
@@ -24,5 +24,15 @@ public class StudentConfigTest {
                 "Id: 2, Name: Thao\n";
         //When
         String actual =currentStudents.toString();
+    }
+
+    @Test
+    public void previousStudentsTest() {
+        //Given
+        String expected =
+                "Id: 3, Name: Bob\n" +
+                        "Id: 4, Name: Betty\n";
+        //When
+        String actual =previousStudents.toString();
     }
 }

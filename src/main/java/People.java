@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,10 @@ public abstract class People <PersonType extends Person>{
     }
 
     public People(PersonType... people) {
-        personList.addAll(Arrays.asList(people));
+        personList = new ArrayList<>();
+        for (PersonType person : people) {
+            personList.add(person);
+        }
     }
 
     public void add(PersonType person) {

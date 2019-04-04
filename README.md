@@ -217,16 +217,16 @@
 
 
 -
-### Part 11.1 - Create `Alumni` Class
-* Create an `Alumni` component which autowires `Students` of the previous cohort and `Instructors`
+### Part 11.1 - Create `AlumniTest` Class
+* Create an `AlumniTest` component which autowires `Students` of the previous cohort and `Instructors`
 * Create an `executeBootcamp` method which teaches each `Student` in the composite `Students` a `totalNumberOfHours` of `1200`.
 	* Annotate this method with `@PostConstruct`
 		* denotes that this method must be executed before the class is put into an IoC container
 * Create a getter for each of the fields.
 
 -
-### Part 11.2 - Test `Alumni` Class
-* Write a test class which ensures that each `Student` in the `Alumni` class has been taught `1200` hours upon injection of the `Alumni` dependency.
+### Part 11.2 - Test `AlumniTest` Class
+* Write a test class which ensures that each `Student` in the `AlumniTest` class has been taught `1200` hours upon injection of the `AlumniTest` dependency.
 * Ensure the `numberOfHoursTaught` has been evenly distributed amongst each of the instructors.
 
 * **Tip:** How to derive `numberOfHoursTaught` dynamically

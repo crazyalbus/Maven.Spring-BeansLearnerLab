@@ -10,8 +10,8 @@ public class StudentConfig {
     );
 
     private Students previousStudents = new Students(
-            new Student(3, "Bob", 1000.0),
-            new Student(4, "Betty", 1000.0)
+            new Student(3, "Bob", 0.0),
+            new Student(4, "Betty", 0.0)
     );
 
     @Bean(name = "students")

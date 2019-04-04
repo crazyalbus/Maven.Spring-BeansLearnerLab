@@ -25,7 +25,7 @@ public class InstructorsConfig {
         return tcUkInstructors;
     }
 
-    @Bean
+    @Bean(name = "instructors")
     @Primary
     public Instructors instructors(){
         Instructors allInstructors = new Instructors();
